@@ -3,7 +3,8 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart, WebPartContext } from '@microsoft/sp-webpart-base';
 
-import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-property-pane';
+import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-webpart-base';
+// import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { initializeFileTypeIcons } from '@fluentui/react-file-type-icons';
@@ -55,14 +56,27 @@ export default class ScaffoldWebPart extends BaseClientSideWebPart<IScaffoldWebP
       pages: [
         {
           header: {
-            description: 'Description'
+            description: 'General Settings'
           },
           groups: [
             {
-              groupName: '',
               groupFields: [
                 PropertyPaneTextField('description', {
                    label: this.properties.description
+                })
+              ]
+            }
+          ]
+        },
+        {
+          header: {
+            description: 'Advanced Settings'
+          },
+          groups: [
+            {
+              groupFields: [
+                PropertyPaneToggle('isDebugging', {
+                  label: 'Use Debug Settings'
                 })
               ]
             }
@@ -83,7 +97,7 @@ export default class ScaffoldWebPart extends BaseClientSideWebPart<IScaffoldWebP
   private getMockAppSettings(): Promise<void> {
     if (window.location.host.toLowerCase().indexOf('localhost') === 0) {
       return new Promise<void>((resolve, reject) => {
-          this.mockSettings = { description: '', isDebugging: true };
+          this.mockSettings = { description: 'Mocked App Settings Description', isDebugging: true };
       })
       .catch(e => {
         console.log(e);

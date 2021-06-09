@@ -17,12 +17,11 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
     "title": { "default": "SPFx Scaffold" },
-    "description": { "default": "IdstSpfxProductManager description" },
+    "description": { "default": "SPFx Scaffolded Project" },
     "officeFabricIconFontName": "Page",
     "properties": {
       "description": "SpfxScaffold - SPFX Folder",
-      "isDebugging": true,
-      "teams": []
+      "isDebugging": false
     }
   }]
 }
