@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/Scaffold/ScaffoldWebPart.js",
+      "manifest": "./src/webparts/Scaffold/ScaffoldWebPart.manifest.json",
+      "outputPath": "./dist/spfx-scaffold-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "ProductManagerWebPartStrings": "webparts/Scaffold/loc/{locale}.js"
+  }
+}
