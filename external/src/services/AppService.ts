@@ -12,7 +12,7 @@ export default class AppService {
     private static _webpart: ScaffoldWebPart;
     private static _context: WebPartContext;
 
-    public static Init(webpart: ScaffoldWebPart, context: WebPartContext): void {
+    public static Init(webpart: ScaffoldWebPart, context?: WebPartContext): void {
         this._webpart = webpart;
         this._context = context ? context : null;
     }

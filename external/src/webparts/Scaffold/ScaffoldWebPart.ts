@@ -11,7 +11,7 @@ import { initializeFileTypeIcons } from '@fluentui/react-file-type-icons';
 import AppService from '../../services/AppService';
 
 import PnPTelemetry from '@pnp/telemetry-js';
-import { Scaffold } from './components/Scaffold';
+import { Scaffold, IScaffoldProps } from './components/Scaffold';
 
 export interface IScaffoldWebPartProps {
   description: string;
@@ -22,7 +22,7 @@ export default class ScaffoldWebPart extends BaseClientSideWebPart<IScaffoldWebP
   private mockSettings: IScaffoldWebPartProps;
 
   public render(): void {
-    const element: React.ReactElement<IPageComponentProps> = React.createElement(
+    const element: React.ReactElement<IScaffoldProps> = React.createElement(
       Scaffold, { }
     );
 
@@ -41,7 +41,7 @@ export default class ScaffoldWebPart extends BaseClientSideWebPart<IScaffoldWebP
     initializeIcons();
     initializeFileTypeIcons();
 
-    AppService.Init(this);
+    AppService.Init(this, this.context);
 
     return Promise.resolve();
   }

@@ -1,11 +1,13 @@
 import * as React from 'react';
 
-export class Scaffold extends React.Component <{}, {}> {
+export interface IScaffoldProps {
+}
+export class Scaffold extends React.Component <IScaffoldProps, {}> {
     public render(): React.ReactElement<{}> {
         return (
-        <div>
-			Scaffolded WebPart
-        </div>
+            <div>
+                Scaffolded WebPart
+            </div>
         );
     }
 }
