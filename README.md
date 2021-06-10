@@ -1,43 +1,48 @@
-# IDST SPFx Product Manager
+# SPFx Scaffold Project
 
 ## Summary
 
-Management tool for tracking requests, tasks, and responses for information
+Simple shell to make using modern applications inside SharePoint on-premise easier/faster
 
-[Experimental use of modern react with SP2016 SPFx](https://spblog.net/post/2019/08/08/build-sharepoint-framework-solutions-for-on-premises-sharepoint-with-any-version-of-react-typescript-or-office-ui-fabric-react)
-
-## TODO
-- Implement CRUD for SharePoint list data and attachments
-- Reassess how teams are tasked (how attachments are managed)
-- Refine UI
-- Fix classNames
-- Troubleshoot FluentUI button icons not showing
-- Lots more
 
 ## Prerequisites
-
 > Have patience
 
 ## Version history
 
 Version|Date|Comments
 -------|----|--------
-0.1|20 May 2021|Initial checkin
+0.1|10 June 2021|Initial checkin
 
-## Disclaimer
-
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
-
----
+## Files to modify or rename
+- Spfx (legacy/on-prem files)
+  - spfx/webparts/Scaffold (rename)
+  - spfx/package.json (modify)
+  - spfx/config/config.json (modify)
+  - spfx/config/package-solution.json (modify)
+  - spfx/ScaffoldWebPart.ts (rename & modify)
+  - spfx/ScaffoldWebPart.manifest.json (rename & modify)
+- External (modern components)  
+  - external/package.json (modify)
+  - external/ScaffoldWebPart.manifest.json (rename & modify)
+  - external/ScaffoldWebPart.ts (rename & modify; must still use legacy components compatible with your installation)
+    - 2016 needs to use property-pane methods in "sp-webpart-base" versus "sp-property-pane"; not sure about 2019
+  - external/webpack/webpack.common.js (modify)
+  - external/webparts/Scaffold (rename)
+  - external/webparts/Scaffold/components/scaffold.module.scss.d.ts (rename & modify)
+  - external/webparts/Scaffold/components/scaffold.tsx (rename & modify)
 
 ## Minimal Path to disaster
-
 - Clone this repository
 - Ensure that you are at the solution folder
 - From the "external" folder, run:
   - **npm run watch**
 - From the "spfx" folder, run:
   - **gulp serve**
+
+## Disclaimer
+
+**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
 
 ## References
 

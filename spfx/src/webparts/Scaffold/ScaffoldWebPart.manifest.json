@@ -20,7 +20,7 @@
     "description": { "default": "SPFx Scaffolded Project" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "SpfxScaffold - SPFX Folder",
+      "description": "SpfxScaffolded Project",
       "isDebugging": false
     }
   }]
