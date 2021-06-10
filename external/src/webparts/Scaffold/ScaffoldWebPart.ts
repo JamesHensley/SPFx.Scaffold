@@ -3,8 +3,9 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart, WebPartContext } from '@microsoft/sp-webpart-base';
 
-import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-webpart-base';
-// import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-property-pane';
+// import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-webpart-base';
+// TODO: Find out what is forcing me to use SP-WEBPART-BASE instead of the newer/proper SP-PROPERTY-PANE
+import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-property-pane';
 
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { initializeFileTypeIcons } from '@fluentui/react-file-type-icons';

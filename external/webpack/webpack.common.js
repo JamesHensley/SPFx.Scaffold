@@ -27,8 +27,6 @@ module.exports = merge({
     },
     externals: [
         /^@microsoft\//,
-        'HelloWorldWebPartStrings',
-        'MyNewWebPartWebPartStrings',
         'ControlStrings'
     ],
     module: {

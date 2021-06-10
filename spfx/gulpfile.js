@@ -5,8 +5,8 @@ const build = require('@microsoft/sp-build-web');
 build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
 
 build.tslint.enabled = false;
-const externalsFolder = "external";
 
+const externalsFolder = "external";
 const copyStaticFilesSubtask = build.subTask('copy-static-files', function (gulp, buildOptions, done) {
   this.log('Copying static files...');
 

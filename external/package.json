@@ -8,7 +8,8 @@
     "watch-gulp": "gulp watch",
     "watch": "concurrently \"npm:watch-*\"",
     "dev": "webpack --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.prod.js"
+    "build": "webpack --config webpack/webpack.prod.js",
+    "postinstall": "npx rimraf node_modules/@microsoft/**/node_modules/@types/react/ && npx rimraf node_modules/@microsoft/**/node_modules/@types/react-dom/"
   },
   "author": "",
   "license": "ISC",
