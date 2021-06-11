@@ -1,11 +1,16 @@
 {
-  "entries": [
-    {
-      "entry": "./lib/webparts/Scaffold/ScaffoldWebPart.js",
-      "manifest": "./src/webparts/Scaffold/ScaffoldWebPart.manifest.json",
-      "outputPath": "./dist/spfx-scaffold-web-part.js"
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-scaffold-bundle": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/Scaffold/ScaffoldWebPart.js",
+          "manifest": "./src/webparts/Scaffold/ScaffoldWebPart.manifest.json"
+        }
+      ]
     }
-  ],
+  },
   "externals": {},
   "localizedResources": {
     "ScaffoldWebPartStrings": "webparts/Scaffold/loc/{locale}.js"

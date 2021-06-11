@@ -106,6 +106,8 @@ module.exports = merge({
     plugins: [new ForkTsCheckerWebpackPlugin({
         tslint: true
     }),
+    // Uncomment the line below to generate a Stats.html document in the dist folder
+    // new Visualizer(),
     new SetPublicPathPlugin({
         scriptName: {
             name: '[name]_?[a-zA-Z0-9-_]*\.js',

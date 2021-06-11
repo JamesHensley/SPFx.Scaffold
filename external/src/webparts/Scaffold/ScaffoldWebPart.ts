@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
-import { BaseClientSideWebPart, WebPartContext } from '@microsoft/sp-webpart-base';
-
-import { IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-webpart-base';
+import { BaseClientSideWebPart, WebPartContext, IPropertyPaneField, IPropertyPaneConfiguration, PropertyPaneTextField, PropertyPaneToggle } from '@microsoft/sp-webpart-base';
 
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { initializeFileTypeIcons } from '@fluentui/react-file-type-icons';
@@ -11,7 +9,7 @@ import { initializeFileTypeIcons } from '@fluentui/react-file-type-icons';
 import AppService from '../../services/AppService';
 
 import PnPTelemetry from '@pnp/telemetry-js';
-import { Scaffold, IScaffoldProps } from './components/Scaffold';
+import { ScaffoldComponent, IScaffoldComponentProps } from './components/ScaffoldComponent';
 
 export interface IScaffoldWebPartProps {
   description: string;
@@ -22,8 +20,8 @@ export default class ScaffoldWebPart extends BaseClientSideWebPart<IScaffoldWebP
   private mockSettings: IScaffoldWebPartProps;
 
   public render(): void {
-    const element: React.ReactElement<IScaffoldProps> = React.createElement(
-      Scaffold, { }
+    const element: React.ReactElement<IScaffoldComponentProps> = React.createElement(
+      ScaffoldComponent, { }
     );
 
     ReactDom.render(element, this.domElement);
